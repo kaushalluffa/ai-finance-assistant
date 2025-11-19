@@ -1,4 +1,4 @@
-import { Zap } from "lucide-react";
+import { Wallet } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -9,29 +9,15 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Zap className="h-5 w-5" />
+                <Wallet className="h-5 w-5" />
               </div>
               <span className="text-lg font-bold tracking-tight">
                 PocketMentor
               </span>
             </div>
             <p className="text-sm text-muted-foreground max-w-[250px]">
-              The intelligent finance assistant that helps you track, save, and
-              grow your wealth.
+              Your Weekly Wealth Compass.
             </p>
-            <div className="flex gap-4">
-              {/* Social Icons */}
-              {["Twitter", "GitHub", "LinkedIn"].map((social) => (
-                <Link
-                  key={social}
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="h-5 w-5 bg-current rounded-full opacity-20 hover:opacity-100" />
-                </Link>
-              ))}
-            </div>
           </div>
           <div>
             <h3 className="mb-4 text-sm font-semibold">Product</h3>
@@ -49,14 +35,6 @@ const Footer = () => {
                   href="#"
                   className="hover:text-foreground transition-colors"
                 >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
                   Security
                 </Link>
               </li>
@@ -65,7 +43,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-foreground transition-colors"
                 >
-                  Roadmap
+                  Pricing
                 </Link>
               </li>
             </ul>
@@ -78,7 +56,7 @@ const Footer = () => {
                   href="#"
                   className="hover:text-foreground transition-colors"
                 >
-                  About
+                  About Us
                 </Link>
               </li>
               <li>
@@ -87,14 +65,6 @@ const Footer = () => {
                   className="hover:text-foreground transition-colors"
                 >
                   Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Blog
                 </Link>
               </li>
               <li>
@@ -126,21 +96,12 @@ const Footer = () => {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Cookie Policy
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} PocketMentor Inc. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} PocketMentor. All rights reserved.
           </p>
         </div>
       </div>
