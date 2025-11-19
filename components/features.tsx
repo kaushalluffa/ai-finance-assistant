@@ -1,72 +1,124 @@
-import { BarChart3, Globe, Lock, PieChart, Shield, Zap } from "lucide-react";
+import { CheckCircle2, Zap } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Features = () => {
   return (
-    <section id="features" className="py-20 md:py-32 bg-muted/30">
+    <section
+      id="features"
+      className="py-20 md:py-32 bg-muted/30 overflow-hidden"
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-            Features
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            Everything you need to <br className="hidden md:block" /> manage
-            your wealth
-          </h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl">
-            Powerful tools designed to help you track, save, and grow your money
-            with minimal effort.
-          </p>
-        </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              icon: BarChart3,
-              title: "Smart Analytics",
-              description:
-                "Visualize your spending habits with interactive charts and get personalized insights to save more.",
-            },
-            {
-              icon: Shield,
-              title: "Bank-Grade Security",
-              description:
-                "Your data is encrypted with 256-bit AES encryption. We never sell your personal information.",
-            },
-            {
-              icon: Zap,
-              title: "Real-time Tracking",
-              description:
-                "Connect your accounts and track transactions in real-time. Never miss a payment or suspicious charge.",
-            },
-            {
-              icon: PieChart,
-              title: "Investment Portfolio",
-              description:
-                "Track all your investments in one place. Stocks, crypto, real estate, and more.",
-            },
-            {
-              icon: Globe,
-              title: "Multi-currency Support",
-              description:
-                "Travel often? We support over 150 currencies with real-time exchange rates.",
-            },
-            {
-              icon: Lock,
-              title: "Privacy First",
-              description:
-                "We are GDPR and CCPA compliant. You have full control over your data and privacy settings.",
-            },
-          ].map((feature, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-background p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                <feature.icon className="h-6 w-6" />
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="order-2 lg:order-1 relative">
+            {/* Phone Mockup */}
+            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-900 border-14px rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+              <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-1rem left-1/2 -translate-x-1/2 absolute"></div>
+              <div className="h-32px w-[3px] bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+              <div className="h-64px w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+              <div className="rounded-2rem overflow-hidden w-full h-full bg-background relative">
+                {/* App Screen Content */}
+                <div className="p-6 h-full flex flex-col">
+                  <div className="flex justify-between items-center mb-8 mt-6">
+                    <span className="font-bold text-lg">PocketMentor</span>
+                    <div className="h-8 w-8 rounded-full bg-muted"></div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-1">Weekly Pulse</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Sunday, Nov 18
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+                      <div className="flex items-center gap-2 mb-2">
+                        <CheckCircle2 className="h-4 w-4 text-green-500" />
+                        <span className="text-sm font-medium text-green-500">
+                          Positive Cash Flow
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <p className="text-xs text-muted-foreground">
+                            Surplus
+                          </p>
+                          <p className="text-2xl font-bold text-foreground">
+                            +$550.00
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-3 rounded-xl bg-muted/50">
+                        <p className="text-xs text-muted-foreground mb-1">
+                          Income
+                        </p>
+                        <p className="font-semibold text-green-500">+$2,400</p>
+                      </div>
+                      <div className="p-3 rounded-xl bg-muted/50">
+                        <p className="text-xs text-muted-foreground mb-1">
+                          Expenses (Est)
+                        </p>
+                        <p className="font-semibold text-red-500">-$1,850</p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-primary text-primary-foreground shadow-lg">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Zap className="h-4 w-4" />
+                        <span className="text-sm font-bold">
+                          The PocketMentor Move
+                        </span>
+                      </div>
+                      <p className="text-sm opacity-90 mb-4 leading-relaxed">
+                        Based on your goals, you have a $550 surplus. We suggest
+                        moving $400 to your S&P 500 ETF and keeping $150 as a
+                        buffer.
+                      </p>
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="w-full font-semibold text-primary"
+                      >
+                        Execute Move
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
             </div>
-          ))}
+          </div>
+          <div className="order-1 lg:order-2 space-y-6">
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              Feature Showcase
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+              Weekly Financial Pulse
+            </h2>
+            <p className="text-muted-foreground md:text-xl">
+              Get a clear picture of your finances every Sunday. No complex
+              spreadsheets, just actionable insights delivered to your pocket.
+            </p>
+            <ul className="space-y-4">
+              {[
+                "Instant cash flow analysis",
+                "Predictive expense modeling",
+                "One-tap investment execution",
+                "Personalized safety buffers",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <CheckCircle2 className="h-4 w-4" />
+                  </div>
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
